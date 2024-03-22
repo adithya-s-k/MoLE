@@ -1,13 +1,35 @@
+# log and data files
+*.model
+*.pkl
+#*.ipynb
+output
+result
+*.pt
+tests/data/asr
+.DS_Store
+bert.pt.json
+work
+runs
+*.parquet
+*.json
+cache/
+fastspeech_output
+.hydra
+.bash_history.local
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+**.pyc
 
 # C extensions
 *.so
 
 # Distribution / packaging
+.idea
 .Python
+wandb
 build/
 develop-eggs/
 dist/
@@ -16,10 +38,11 @@ eggs/
 .eggs/
 lib/
 lib64/
-parts/
+#parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
@@ -46,10 +69,8 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-*.py,cover
 .hypothesis/
 .pytest_cache/
-cover/
 
 # Translations
 *.mo
@@ -59,7 +80,6 @@ cover/
 *.log
 local_settings.py
 db.sqlite3
-db.sqlite3-journal
 
 # Flask stuff:
 instance/
@@ -69,52 +89,34 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+docs/build
 
 # PyBuilder
-.pybuilder/
 target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# Override Jupyter in Github Language states for more accurate estimate of repo code.
+# Reference: https://github.com/github/linguist/blob/master/docs/overrides.md#generated-code
+*.ipynb linguist-generated
 
 # IPython
 profile_default/
 ipython_config.py
 
 # pyenv
-#   For a library or package, you might want to ignore these files since the code is
-#   intended to run in multiple environments; otherwise, check them in:
-# .python-version
+.python-version
 
 # pipenv
 #   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
 #   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   having no cross-platform support, pipenv may install dependencies that don’t work, or not
 #   install all needed dependencies.
 #Pipfile.lock
 
-# poetry
-#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
-
-# pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#pdm.lock
-#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
-#   in version control.
-#   https://pdm.fming.dev/#use-with-ide
-.pdm.toml
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
-__pypackages__/
-
-# Celery stuff
+# celery beat schedule file
 celerybeat-schedule
-celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
@@ -128,6 +130,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# VSCode project settins
+.vscode/
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -137,6 +142,8 @@ venv.bak/
 
 # mkdocs documentation
 /site
+/docs/html
+/docs/docs_zh/zh
 
 # mypy
 .mypy_cache/
@@ -146,15 +153,33 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# pytype static type analyzer
-.pytype/
+# Emacs backup files
+*~
 
-# Cython debug symbols
-cython_debug/
+cifar-10-batches-py
+*.tar.gz
 
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+# Test data.
+tests/.data
+tests/data
+
+# outputs folder
+wandb
+dump.py
+
+docs/sources/source/test_build/
+
+# Checkpoints, config files and temporary files created in tutorials.
+.hydra/
+nemo_experiments/
+
+.ruff_cache
+
+tmp.py
+
+benchmark_output
+prod_env
+
+logs
+_logs
+outputs
