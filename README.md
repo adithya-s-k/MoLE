@@ -1,7 +1,5 @@
 # MoLE(Mixture of Lora Experts)
-MoLE is a novel approach to fine-tuning large language models (LLMs) for multiple tasks simultaneously, leveraging the concept of specialized "Lora" adapters that dynamically adapt the base model's behavior based on task requirements.
-MoLE is designed to enhance the versatility and performance of pre-trained LLMs by incorporating task-specific/language specific LoRA adapters. These LoRA adapters are automatically selected and merged with the base model during inference, guided by a task classifier trained during the fine-tuning process.
-
+MoLE is a novel approach to fine-tuning large language models (LLMs) for multiple tasks simultaneously, leveraging the concept of specialized LoRA adapters that dynamically adapt the base model's behavior based on task requirements. MoLE is designed to enhance the versatility and performance of pre-trained LLMs by incorporating task-specific/language-specific adapters. These adapters are automatically selected and merged with the base model during inference, guided by a task classifier trained during the fine-tuning process.
 
 <table>
   <tr>
